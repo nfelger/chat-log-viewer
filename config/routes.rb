@@ -1,7 +1,8 @@
-Tmprls::Application.routes.draw do
-  resources :messages
-
-  resources :chats
+ChatLogs::Application.routes.draw do
+  
+  resources :chats do
+    resources :messages
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

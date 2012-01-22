@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Tmprls::Application.load_tasks
+ChatLogs::Application.load_tasks
