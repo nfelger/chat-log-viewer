@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120122194259) do
     t.datetime "updated_at", :null => false
     t.string   "username",   :null => false
     t.text     "body",       :null => false
+    t.integer  "chat_id"
   end
 
 end

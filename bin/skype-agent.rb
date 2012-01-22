@@ -2,10 +2,11 @@
 
 require File.expand_path('../../config/environment',  __FILE__)
 Rype.on(:chatmessage_received) do |chatmessage|
-  chatmessage.chat do |chat|
-    chatmessage.body do |body|
-      chatmessage.from do |from_handle|
-        p [:got_message, chat.inspect, from_handle, body]
+  chatmessage.chat do |skype_chat|
+    chatmessage.from do |from_handle|
+      chatmessage.body do |body|
+        chat = Chat.find_or_create_by_name(skype_chat.chatname)
+        Message.create!(:username => from_handle, :body => body, :chat => chat)
       end
     end
   end

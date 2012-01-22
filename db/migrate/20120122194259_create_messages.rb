@@ -5,6 +5,7 @@ class CreateMessages < ActiveRecord::Migration
       t.timestamps
       t.column :username, :string, :null => false
       t.column :body, :text, :null => false
+      t.references :chat
     end
   end
 end

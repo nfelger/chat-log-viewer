@@ -15,7 +15,6 @@ development:
   database: skype-logs_development
   pool: 5
   username: root
-  password: password
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +27,6 @@ test:
   database: skype-logs_test
   pool: 5
   username: root
-  password: password
   host: localhost
 
 production:
@@ -38,5 +36,4 @@ production:
   database: skype-logs_production
   pool: 5
   username: root
-  password: password
   host: localhost
