@@ -1,5 +1,5 @@
 <ul>
   <% @chats.each do |chat| %>
-    <li><%= link_to chat.name, chat_messages_path(chat.id) %></li>
+    <li><%= link_to (chat.topic || chat.name), chat_messages_path(chat.id) %></li>
   <% end %>
 </ul>

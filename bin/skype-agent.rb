@@ -6,7 +6,13 @@ Rype.on(:chatmessage_received) do |chatmessage|
     chatmessage.from do |from_handle|
       chatmessage.body do |body|
         chat = Chat.find_or_create_by_name(skype_chat.chatname)
-        Message.create!(:username => from_handle, :body => body, :chat => chat)
+        skype_chat.topic do |topic|
+          unless topic.blank?
+            chat.topic = topic 
+            chat.save!
+          end
+          Message.create!(:username => from_handle, :body => body, :chat => chat)
+        end
       end
     end
   end

@@ -4,6 +4,7 @@ class CreateChats < ActiveRecord::Migration
 
       t.timestamps
       t.column :name, :string, :null => false
+      t.column :topic, :string
     end
   end
 end
