@@ -1,0 +1,5 @@
+<ul>
+  <% @messages.each do |message| %>
+    <li><span class="username"><%= message.username %></span> <span class="messageBody"><%= message.body %></span></li>
+  <% end %>
+</ul>
