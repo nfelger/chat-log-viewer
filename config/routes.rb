@@ -2,6 +2,9 @@ ChatLogs::Application.routes.draw do
   
   resources :chats do
     resources :messages
+    member do
+      post 'invite'
+    end
   end
 
   # The priority is based upon order of creation:

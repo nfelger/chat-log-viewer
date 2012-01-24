@@ -1,7 +1,16 @@
 <h2><%= @chat.topic %></h2>
-<small><button>Invite me back to this chat</button></small>
+<small><button class='inviteButton'>Invite me back to this chat</button></small>
 <ul>
   <% @messages.each do |message| %>
     <li><span class="username"><%= message.username %></span> <span class="messageBody"><%= message.body %></span></li>
   <% end %>
 </ul>
+
+<script type='text/javascript'>
+  $('.inviteButton').click(function() {
+    var name = prompt('And you are? (Skype username please)');
+    $.post("<%= chat_path(@chat.id) %>/invite", {'username': name}, function(data) {
+      alert('Hrmkay. You should be back in the chat. Maybe. If weren't there already.');
+    });
+  });
+</script>
