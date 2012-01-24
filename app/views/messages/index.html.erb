@@ -1,3 +1,5 @@
+<h2><%= @chat.topic %></h2>
+<small><button>Invite me back to this chat</button></small>
 <ul>
   <% @messages.each do |message| %>
     <li><span class="username"><%= message.username %></span> <span class="messageBody"><%= message.body %></span></li>

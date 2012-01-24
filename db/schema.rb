@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20120122194259) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "name",       :null => false
+    t.string   "topic"
   end
 
   create_table "messages", :force => true do |t|
