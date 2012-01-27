@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+ENV['DONT_ATTACH_RYPE'] = 'true'
 require File.expand_path('../../config/environment',  __FILE__)
 Rype.on(:chatmessage_received) do |chatmessage|
   chatmessage.chat do |skype_chat|

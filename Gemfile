@@ -33,4 +33,4 @@ gem 'capistrano'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'foreman'
-gem 'rype', :git => 'git://github.com/nfelger/rype.git'
+gem 'rype'

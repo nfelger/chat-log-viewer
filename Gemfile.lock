@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/nfelger/rype.git
-  revision: 13458e4e28934e0bb4ff584146bb9327f9cc686e
-  specs:
-    rype (0.0.2)
-      ruby-dbus (>= 0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -107,6 +100,8 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     ruby-dbus (0.7.0)
+    rype (0.0.4)
+      ruby-dbus (>= 0.6)
     sass (3.1.12)
     sass-rails (3.2.3)
       railties (~> 3.2.0.beta)
@@ -141,7 +136,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 3.2.0)
-  rype!
+  rype
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   unicorn
