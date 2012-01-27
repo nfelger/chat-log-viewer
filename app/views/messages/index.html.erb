@@ -10,7 +10,7 @@
   $('.inviteButton').click(function() {
     var name = prompt('And you are? (Skype username please)');
     $.post("<%= chat_path(@chat.id) %>/invite", {'username': name}, function(data) {
-      alert('Hrmkay. You should be back in the chat. Maybe. If weren't there already.');
+      alert("Hrmkay. You should be back in the chat. Maybe. If weren't there already.");
     });
   });
 </script>
