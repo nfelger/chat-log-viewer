@@ -1,6 +1,6 @@
 <h2><%= @chat.topic %></h2>
 <small><button class='inviteButton'>Invite me back to this chat</button></small>
-<table class="table table-striped><tbody>
+<table class="table table-striped"><tbody>
   <% @messages.each do |message| %>
     <tr><th><span class="username"><%= message.username %></span></th><td><span class="messageBody"><%= message.body %></span></td></tr>
   <% end %>
